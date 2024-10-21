@@ -1,0 +1,57 @@
+#!/usr/bin/env sh
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# global settings
+yabai -m config focus_follows_mouse          autoraise
+yabai -m mouse_follows_focus                 autofocus
+yabai -m config window_placement             first_child
+yabai -m config window_topmost               off
+yabai -m config window_shadow                off
+yabai -m config window_opacity               off
+yabai -m config window_opacity_duration      0.0
+yabai -m config active_window_opacity        1.0
+yabai -m config normal_window_opacity        1.0
+yabai -m config window_border                off
+yabai -m config window_border_width          0
+yabai -m config active_window_border_color   0xff81A1C1
+yabai -m config normal_window_border_color   0xff7A808C
+yabai -m config insert_feedback_color        0xff61afef
+yabai -m config split_ratio                  0.50
+yabai -m config auto_balance                 on
+yabai -m config mouse_modifier               fn
+yabai -m config mouse_action1                move
+yabai -m config mouse_action2                resize
+yabai -m config mouse_drop_action            swap
+
+yabai -m config layout                       bsp
+yabai -m config top_padding                  30
+yabai -m config bottom_padding               30
+yabai -m config left_padding                 40
+yabai -m config right_padding                40
+yabai -m config window_gap                   30
+yabai -m config --space 8 layout float
+yabai -m config --space 9 layout float
+yabai -m config --space 10 layout float
+
+yabai -m config status_bar_space_icon_strip  1 2 3 4 5 6 7 8 9 10 11 12
+
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+yabai -m rule --add app="^Installer$" manage=off
+yabai -m rule --add app="^Hotspot Shield$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Path of Exile$" manage=off
+yabai -m rule --add app="^Facetime$" manage=off
+yabai -m rule --add app="^League of Legends$" manage=off
+yabai -m rule --add app="^Riot Client$" manage=off
+yabai -m rule --add app="^MultiViewer for F1$" manage=off
+yabai -m rule --add app="^Betternet VPN$" manage=off
+yabai -m rule --add app="^Quicktime Player$" manage=off
+yabai -m rule --add app="^FaceTime$" manage=off
+
+# borders
+
+echo "yabai configuration loaded.."
