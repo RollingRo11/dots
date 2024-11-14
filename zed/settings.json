@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "theme": "Asteroid",
   "lsp": {
     "pyright": {
@@ -22,20 +29,9 @@
     },
     "kotlin-language-server": {
       "settings": {
-        "completion": {
-          "enabled": true
-        },
-        "externalSources": {
-          "useKlsScheme": true
-        },
-        "inlayHints": {
-          "typeHints": true,
-          "parameterHints": true,
-          "chainedHints": true
-        },
         "compiler": {
           "jvm": {
-            "target": "20"
+            "target": "22.0.2"
           }
         }
       }
@@ -45,13 +41,15 @@
     "Python": {
       "language_servers": ["ruff", "pyright"]
     }
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-5-sonnet-20240620"
-    },
-    "version": "2"
+    // "C": {
+    //   "formatter": {
+    //     "external": {
+    //       "command": "clang-format",
+    //       "arguments": ["{buffer_path}"]
+    //     }
+    //   },
+    //   "format_on_save": "on"
+    // }
   },
   "soft_wrap": "bounded",
   "preferred_line_length": 120,
@@ -59,13 +57,19 @@
   "ui_font_size": 15,
   "ui_font_family": ".SystemUIFont",
   "relative_line_numbers": true,
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "CaskaydiaCove Nerd Font",
   "buffer_font_size": 14,
   "buffer_font_features": {
     "calt": true,
     "liga": true
   },
+  "collaboration_panel": {
+    "button": false
+  },
   "features": {
     "inline_completion_provider": "none"
+  },
+  "chat_panel": {
+    "button": false
   }
 }
