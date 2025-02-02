@@ -1,0 +1,9 @@
+[[language]]
+name = "java"
+scope = "source.java"
+injection-regex = "java"
+file-types = ["java"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "  " }
+formatter = { command = "jdtls" , args = ["-data"] }
+auto-format = true

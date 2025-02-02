@@ -1,0 +1,46 @@
+theme = "poimandres"
+
+[editor]
+mouse = true
+bufferline = "always"
+line-number = "relative"
+scroll-lines = 1
+scrolloff = 20
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.indent-guides]
+render = false
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = [ "mode", "file-modification-indicator", "diagnostics" ]
+center = [ "file-name", "separator", "version-control", "separator" ]
+right = [ "file-type", "position", "total-line-numbers" ]
+separator = " "
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
+
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 30
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-inlay-hints = true
+auto-signature-help = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[keys.normal]
+Cmd-s = ":write" # Cmd or Win or Meta and 's' to write
